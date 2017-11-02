@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqEFCoreExtension", "MoqEFCoreExtension\MoqEFCoreExtension.csproj", "{75E0AABD-1891-4A20-8872-2C2737736AFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoqEFCoreExtension", "MoqEFCoreExtension\MoqEFCoreExtension.csproj", "{75E0AABD-1891-4A20-8872-2C2737736AFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamManageSample", "ExamManageSample\ExamManageSample.csproj", "{2FDD539B-218A-4589-A73D-E0A459E7A912}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamManageSample.XUnitTest", "ExamManageSample.XUnitTest\ExamManageSample.XUnitTest.csproj", "{319DA5CE-F33F-4F7D-A1D0-7EAD1FAE991D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{75E0AABD-1891-4A20-8872-2C2737736AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75E0AABD-1891-4A20-8872-2C2737736AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75E0AABD-1891-4A20-8872-2C2737736AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDD539B-218A-4589-A73D-E0A459E7A912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDD539B-218A-4589-A73D-E0A459E7A912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDD539B-218A-4589-A73D-E0A459E7A912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDD539B-218A-4589-A73D-E0A459E7A912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319DA5CE-F33F-4F7D-A1D0-7EAD1FAE991D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319DA5CE-F33F-4F7D-A1D0-7EAD1FAE991D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319DA5CE-F33F-4F7D-A1D0-7EAD1FAE991D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319DA5CE-F33F-4F7D-A1D0-7EAD1FAE991D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

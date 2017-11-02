@@ -7,6 +7,7 @@
     <Company>桂素伟</Company>
     <PackageProjectUrl>https://github.com/axzxs2001/MoqEFCoreExtension</PackageProjectUrl>
     <RepositoryUrl>https://github.com/axzxs2001/MoqEFCoreExtension</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
