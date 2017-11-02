@@ -23,8 +23,8 @@ Demo:
             var answerSet = new Mock<DbSet<Answers>>().SetUpList(list);      
             //装载测试数据
             dbMock.Setup(db => db.Answers).Returns(answerSet.Object);
-            //设用被测试方法
-            var answers = answerRepository.GetAnswers(1);
+            //设用被测试方法，在该方中用到了TestManageDBContext.Answers.Where执行查询，所以上面代码要把List<Answers>装载成DbSet<Answers>
+            var answers = answerRepository.GetAnswers(1);
             //断言
             Assert.Equal(2, answers.Count);
         }
