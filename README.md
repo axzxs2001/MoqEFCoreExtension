@@ -1,6 +1,7 @@
 \# MoqEFCoreExtension
 在单元测试(Unit Test)时，如果使用Moq作为隔离框架，并需要模似(Mock) DbContext(Entity Framework Core)下的DbSet&lt;Entity>，本项目给出了解决方案，可以用List&lt;Entity>或Entity[]，模拟DbSet&lt;Entity>完成测试操作。
 
+本例是采用XUnit进行单元测试。
 Demo:
 
         /// <summary>
