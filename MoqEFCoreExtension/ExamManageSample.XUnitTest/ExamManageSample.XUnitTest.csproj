@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExamManageSample\ExamManageSample.csproj" />
     <ProjectReference Include="..\MoqEFCoreExtension\MoqEFCoreExtension.csproj" />
   </ItemGroup>
 
