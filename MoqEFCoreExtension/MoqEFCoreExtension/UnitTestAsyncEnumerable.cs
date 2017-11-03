@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace MoqEFCoreExtension
 {
-     class UnitTestAsyncEnumerable<T> : EnumerableQuery<T>, IAsyncEnumerable<T>, IQueryable<T>
+    /// <summary>
+    /// 自定义实现EnumerableQuery<T>, IAsyncEnumerable<T>, IQueryable<T>类型
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    class UnitTestAsyncEnumerable<T> : EnumerableQuery<T>, IAsyncEnumerable<T>, IQueryable<T>
     {
         public UnitTestAsyncEnumerable(IEnumerable<T> enumerable)
             : base(enumerable)

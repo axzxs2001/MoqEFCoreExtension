@@ -20,7 +20,7 @@ namespace MoqEFCoreExtension
         /// <returns></returns>
         public static Mock<DbSet<T>> SetupList<T>(this Mock<DbSet<T>> mockSet, List<T> list) where T : class
         {
-           return mockSet.SetupArray(list.ToArray());      
+            return mockSet.SetupArray(list.ToArray());
         }
         /// <summary>
         /// 加载数据到DbSet

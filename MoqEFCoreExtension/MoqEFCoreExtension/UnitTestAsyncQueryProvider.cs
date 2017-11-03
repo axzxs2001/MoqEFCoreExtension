@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace MoqEFCoreExtension
 {
+    /// <summary>
+    /// 实现IQueryProvider接口
+    /// </summary>
+    /// <typeparam name="TEntity"></typeparam>
     class UnitTestAsyncQueryProvider<TEntity> : IAsyncQueryProvider
     {
         private readonly IQueryProvider _inner;

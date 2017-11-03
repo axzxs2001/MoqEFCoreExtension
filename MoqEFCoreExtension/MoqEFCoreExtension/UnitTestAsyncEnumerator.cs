@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace MoqEFCoreExtension
 {
-      class UnitTestAsyncEnumerator<T> : IAsyncEnumerator<T>
+    /// <summary>
+    /// 定义关现IAsyncEnumerator<T>类型
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    class UnitTestAsyncEnumerator<T> : IAsyncEnumerator<T>
     {
         private readonly IEnumerator<T> _inner;
 
