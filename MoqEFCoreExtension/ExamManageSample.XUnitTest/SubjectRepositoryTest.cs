@@ -35,7 +35,7 @@ namespace ExamManageSample.XUnitTest
         public void GetSubjects_Default_ReturnCount()
         {
             var data = new List<Subjects> { new Subjects { Id = 1, Name = "科目1" }, new Subjects { Id = 2, Name = "科目" } };
-            var subjectSet = new Mock<DbSet<Subjects>>().SetUpList(data);
+            var subjectSet = new Mock<DbSet<Subjects>>().SetupList(data);
            
             _dbMock.Setup(db => db.Subjects).Returns(subjectSet.Object);
             var list = _subjectRepository.GetSubjects();

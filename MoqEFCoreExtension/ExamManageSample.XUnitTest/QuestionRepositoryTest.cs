@@ -39,7 +39,7 @@ namespace ExamManageSample.XUnitTest
         public void GetQuestionsByTestID_Default_ReturnCount()
         {
             var data = new List<Questions> { new Questions { Id = 1, Question = "题目1",TestId=1 }, new Questions { Id = 2, Question = "题目2" ,TestId=1} };
-            var questionSet = new Mock<DbSet<Questions>>().SetUpList(data);
+            var questionSet = new Mock<DbSet<Questions>>().SetupList(data);
     
             _dbMock.Setup(db => db.Questions).Returns(questionSet.Object);
             var list = _questionRepository.GetQuestionsByTestID(1);

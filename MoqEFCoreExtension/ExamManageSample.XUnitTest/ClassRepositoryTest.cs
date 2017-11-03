@@ -39,7 +39,7 @@ namespace ExamManageSample.XUnitTest
                 new Classes { Id = 2, ClassName = "≤‚ ‘2" }
             }; 
         
-            var mockSet = new Mock<DbSet<Classes>>().SetUpList(data);      
+            var mockSet = new Mock<DbSet<Classes>>().SetupList(data);      
             _dbMock.Setup(c => c.Classes).Returns(mockSet.Object);
             var clses = _classRepository.GetClasses();
             Assert.Equal(2, clses.Count);

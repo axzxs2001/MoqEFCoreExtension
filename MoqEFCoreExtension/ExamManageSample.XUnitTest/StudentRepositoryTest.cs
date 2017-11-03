@@ -79,7 +79,7 @@ namespace ExamManageSample.XUnitTest
                     Class = new Classes { ClassName = "二班" }
                 }
             };
-            var studentSet = new Mock<DbSet<Students>>().SetUpList(data);
+            var studentSet = new Mock<DbSet<Students>>().SetupList(data);
        
             _dbMock.Setup(db => db.Students).Returns(studentSet.Object);
             var students = _studentRepository.GetStudentsByClsID(1);

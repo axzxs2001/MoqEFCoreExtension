@@ -37,7 +37,7 @@ namespace ExamManageSample.XUnitTest
         public void GetClassTests_Default_ReturnCount()
         {
             var data = new List<ClassTests> { new ClassTests { Id = 1, ClassId = 1, TestId = 1, IsValidate = true, Class = new Classes(),Test=new Tests() }, new ClassTests { Id = 2, ClassId = 1, TestId = 2,IsValidate=true, Class = new Classes(), Test = new Tests() } };
-            var clsTestSet = new Mock<DbSet<ClassTests>>().SetUpList(data);
+            var clsTestSet = new Mock<DbSet<ClassTests>>().SetupList(data);
          
             _dbMock.Setup(db => db.ClassTests).Returns(clsTestSet.Object);
             var list = _classTestRepository.GetClassTests();
@@ -50,7 +50,7 @@ namespace ExamManageSample.XUnitTest
         public void GetTestByClassID_Default_ReturnCount()
         {
             var data = new List<ClassTests> { new ClassTests { Id = 1, ClassId = 1, TestId = 1, IsValidate = true, Class = new Classes(), Test = new Tests() }, new ClassTests { Id = 2, ClassId = 1, TestId = 2, IsValidate = false, Class = new Classes(), Test = new Tests() } };
-            var clsTestSet = new Mock<DbSet<ClassTests>>().SetUpList(data);
+            var clsTestSet = new Mock<DbSet<ClassTests>>().SetupList(data);
 
             _dbMock.Setup(db => db.ClassTests).Returns(clsTestSet.Object);
             var test = _classTestRepository.GetTestByClassID(1);
@@ -62,7 +62,7 @@ namespace ExamManageSample.XUnitTest
         public void GetTestByClassID_ErrorClassID_ReturnNull()
         {
             var data = new List<ClassTests> { new ClassTests { Id = 1, ClassId = 1, TestId = 1, IsValidate = true, Class = new Classes(), Test = new Tests() }, new ClassTests { Id = 2, ClassId = 1, TestId = 2, IsValidate = false, Class = new Classes(), Test = new Tests() } };
-            var clsTestSet = new Mock<DbSet<ClassTests>>().SetUpList(data);
+            var clsTestSet = new Mock<DbSet<ClassTests>>().SetupList(data);
             _dbMock.Setup(db => db.ClassTests).Returns(clsTestSet.Object);
             var test = _classTestRepository.GetTestByClassID(2);
             Assert.Null(test);

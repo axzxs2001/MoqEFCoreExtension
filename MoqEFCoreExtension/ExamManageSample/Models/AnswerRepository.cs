@@ -49,7 +49,7 @@ namespace ExamManageSample.Models
         /// <returns></returns>
         public bool ModifyAnswer(Answers answer)
         {
-            var oldAnswer = db.Answers.Find(answer.Id);
+            var oldAnswer = db.Answers.SingleOrDefault(s=>s.Id==answer.Id);
             if (oldAnswer == null)
             {
                 throw new Exception($"查询不到ID为{answer.Id}的答案");

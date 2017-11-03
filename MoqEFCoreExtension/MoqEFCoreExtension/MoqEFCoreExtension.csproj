@@ -8,6 +8,9 @@
     <PackageProjectUrl>https://github.com/axzxs2001/MoqEFCoreExtension</PackageProjectUrl>
     <RepositoryUrl>https://github.com/axzxs2001/MoqEFCoreExtension</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

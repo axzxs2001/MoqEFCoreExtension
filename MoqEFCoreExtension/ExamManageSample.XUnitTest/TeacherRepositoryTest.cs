@@ -37,7 +37,7 @@ namespace ExamManageSample.XUnitTest
         {
             var teacher = new Teachers { Id = 1, TeaacherNo = "0001", Password = "111111" };
             var data = new List<Teachers> { teacher };
-            var teacherSet = new Mock<DbSet<Teachers>>().SetUpList(data);
+            var teacherSet = new Mock<DbSet<Teachers>>().SetupList(data);
  
             _dbMock.Setup(db => db.Teachers).Returns(teacherSet.Object);
             var backTeacher = _teacherRepository.Login("0001","111111");
@@ -53,7 +53,7 @@ namespace ExamManageSample.XUnitTest
         {
             var teacher = new Teachers { Id = 1, TeaacherNo = "0001", Password = "111111" };
             var data = new List<Teachers> { teacher };
-            var teacherSet = new Mock<DbSet<Teachers>>().SetUpList(data);        
+            var teacherSet = new Mock<DbSet<Teachers>>().SetupList(data);        
 
             _dbMock.Setup(db => db.Teachers).Returns(teacherSet.Object);
             var backTeacher = _teacherRepository.Login("0001", "222222");
@@ -68,7 +68,7 @@ namespace ExamManageSample.XUnitTest
         public void GetClasses_Default_ReturnCount()
         {
             var data = new List<Teachers> { new Teachers(), new Teachers()};
-            var teacherSet = new Mock<DbSet<Teachers>>().SetUpList(data);
+            var teacherSet = new Mock<DbSet<Teachers>>().SetupList(data);
 
            
             _dbMock.Setup(db => db.Teachers).Returns(teacherSet.Object);
