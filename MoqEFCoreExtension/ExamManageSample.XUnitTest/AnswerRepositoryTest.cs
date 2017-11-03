@@ -42,9 +42,9 @@ namespace ExamManageSample.XUnitTest
         /// </summary>
         [Fact]
         public void GetAnswer_Default_ReturnCount()
-        { 
+        {
             //Mock  DbSet<Answers>
-            var answerSet = new Mock<DbSet<Answers>>().SetupList(answerList);      
+            var answerSet = new Mock<DbSet<Answers>>().SetupList(answerList);
             //装载测试数据
             _dbMock.Setup(db => db.Answers).Returns(answerSet.Object);
             //设用被测试方法
@@ -82,11 +82,9 @@ namespace ExamManageSample.XUnitTest
         /// </summary>
         [Fact]
         public void ModifyAnswer_NotFind_ThrowException()
-        {           
-               
-            var answerSet = new Mock<DbSet<Answers>>().SetupList(answerList);  
-            _dbMock.Setup(db => db.Answers).Returns(answerSet.Object);        
-            // _dbMock.Setup(db => db.Answers.Find()).Returns(value: null);
+        {
+            var answerSet = new Mock<DbSet<Answers>>().SetupList(answerList);
+            _dbMock.Setup(db => db.Answers).Returns(answerSet.Object);
             var ext = Assert.Throws<Exception>(() => _answerRepository.ModifyAnswer(new Answers { Id = 111 }));
             Assert.Contains("查询不到ID为111的答案", ext.Message);
         }
@@ -97,7 +95,7 @@ namespace ExamManageSample.XUnitTest
         [InlineData(0)]
         [InlineData(1)]
         public void ModifyAnswer_Default_ReturnTrue(int result)
-        {            
+        {
             //Mock DbContext DbSet<Answers>
             var answerSet = new Mock<DbSet<Answers>>().SetupList(answerList);
             //用list装载DbSet<Answers>
